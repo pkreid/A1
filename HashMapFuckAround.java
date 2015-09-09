@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 
 public class HashMapFuckAround {
@@ -20,8 +21,8 @@ public class HashMapFuckAround {
 		Map<String, String> barNum = new HashMap<String, String>();
 	// Loop over the entries 
 		for (Map.Entry<String, String>entry : barPrice.entrySet()) {
-			// Take the names from barPrice, get amount from Consol
-			barNum.put(entry.getKey(), "foo");
+			// Take the names from barPrice, get amount from Console
+			barNum.put(entry.getKey(), new Scanner(System.in).nextLine());
 			
 			System.out.println(barNum.keySet());
 		//	System.out.println(entry.getKey() +" " + entry.getValue());
