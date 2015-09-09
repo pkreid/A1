@@ -9,28 +9,15 @@ public class BallPackerProgram{
 	 */
 	public static void main(String[] args) {
 	
-		int height = (int) GetDim("Box Height");
-		int width = (int) GetDim("Box Width");
-		int length = (int) GetDim("Box length");
-		float BallRad = GetDim("Ball Radius");
-		double ballVol = (BallRad * 2);
-		int ballCount =0;
-		while(height >= ballVol && length >= ballVol && width >= ballVol) {
-			height -= ballVol;
-			length -= ballVol;
-			width -= ballVol;
-			ballCount += 1;
+		double height = (int) GetDim("Box Height");
+		double width = (int) GetDim("Box Width");
+		double length = (int) GetDim("Box length");
+		double ballLen = (GetDim("Ball Radius")) * 2;
+		double ballNum = (Math.floor(height/ballLen) * Math.floor(width/ballLen) * Math.floor(length/ballLen));
+		
 			
-		}
-		
-		
-		
-		
-		
-		JOptionPane.showMessageDialog(null, "The Box can hold " + ballCount + " Balls");
-		
-		}
-	
+		JOptionPane.showMessageDialog(null, "The Box can hold " + (int) Math.floor(ballNum) + " Balls");
+	}
 	public static float GetDim(String DimName) {
 		float BoxDim;
 		BoxDim = Float.parseFloat(JOptionPane.showInputDialog( "What is the " + DimName));
