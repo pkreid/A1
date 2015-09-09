@@ -2,7 +2,6 @@ import javax.swing.JOptionPane;
 import java.lang.Double; 
 import java.lang.Object; 
 public class BallPackerProgram{
-	// Test: this comment is to test whether egit is working
 	/**
 	 * @param args
 	 */
