@@ -11,7 +11,6 @@ public class ChocolateBarsProgram {
 	public static void main(String[] args) {
 		// populate the price list
 		Map<String, String> barPrice= new HashMap<String,String>(){{
-			
 			put("Oh Henry", "0.65");
 			put("Coffee Crisp", "0.80");
 			put("Aero", "0.60");
@@ -22,10 +21,18 @@ public class ChocolateBarsProgram {
 	// Make the hash to store the amounts
 		Map<String, String> barNum = new HashMap<String, String>();
 	// Loop over the entries 
+		int i = 1;
 		for (Map.Entry<String, String>entry : barPrice.entrySet()) {
-			// Take the names from barPrice, get amount from Console
+			System.out.printf("%-1d. ", i);
+			System.out.printf("%-25s", entry.getKey() );
+			System.out.printf("$%2s \n", entry.getValue());
+			++i;
+			
+		}
+		for (Map.Entry<String, String>entry : barPrice.entrySet()) {
+	// Take the names from barPrice, get amount from Console
 			System.out.printf("%-75s", "How many boxes of " + entry.getKey() + " would you like (48 bars per box) ? ");
-			barNum.put(entry.getKey(), new Scanner(System.in).next());
+			barNum.put(entry.getKey(), new Scanner(System.in).next()); //TODO consider nextInt()
 			}
 		
 	//loop again
@@ -39,7 +46,7 @@ public class ChocolateBarsProgram {
 			float barTotal = (Float.parseFloat(barPrice.get(barName)) * (Float.parseFloat(barAmt)) * 48);
 			System.out.printf("%-25s", barAmt + " boxes of " + barName);
 			System.out.printf("%19s", "($" + barPrice.get(barName) + " x 48) = $" );
-			System.out.printf("%2.2f\n",barTotal);
+			System.out.printf("%02.2f\n",barTotal);
 			subTotal += barTotal;
 		}
 		
