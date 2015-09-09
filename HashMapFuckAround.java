@@ -20,9 +20,9 @@ public class HashMapFuckAround {
 		}};
 		Map<String, String> barNum = new HashMap<String, String>();
 	// Loop over the entries 
-		for (String key : barPrice.keySet() ) {
+		for (Map.Entry<String, String>entry : barPrice.entrySet()) {
 			// Take the names from barPrice, get amount from Console
-			barNum.put(barPrice.keySet(), new Scanner(System.in).nextLine());
+			barNum.put(entry.getKey(), new Scanner(System.in).nextLine());
 			
 			System.out.println(barNum.keySet());
 		//	System.out.println(entry.getKey() +" " + entry.getValue());
