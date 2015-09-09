@@ -1,4 +1,6 @@
 import javax.swing.JOptionPane;
+import javax.swing.text.StyledEditorKit.BoldAction;
+
 import java.lang.Double; 
 import java.lang.Object; 
 public class BallPackerProgram{
@@ -11,19 +13,21 @@ public class BallPackerProgram{
 		int width = (int) GetDim("Box Width");
 		int length = (int) GetDim("Box length");
 		float BallRad = GetDim("Ball Radius");
-	// this line tests that all of the boxes dimensions are greater than the balls radius
-		if ((BallRad * 2) >  (float) height || (BallRad * 2) > (float) length  || (BallRad *2 > (float) width)) {
-			JOptionPane.showMessageDialog(null, "The box cannot hold any balls");
-			System.exit(0);
+		double ballVol = (BallRad * 2);
+		int ballCount =0;
+		while(height >= ballVol && length >= ballVol && width >= ballVol) {
+			height -= ballVol;
+			length -= ballVol;
+			width -= ballVol;
+			ballCount += 1;
+			
 		}
 		
 		
-		int BoxVol = (height * width * length); 
-	
-		double BallVol = Math.pow((BallRad * 2), 3.0);
-		int BallNum;
-		BallNum = (int) Math.floor(BoxVol/BallVol);
-		JOptionPane.showMessageDialog(null, "The Box can hold " + BallNum + " Balls");
+		
+		
+		
+		JOptionPane.showMessageDialog(null, "The Box can hold " + ballCount + " Balls");
 		
 		}
 	
