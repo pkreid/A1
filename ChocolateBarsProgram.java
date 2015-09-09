@@ -2,8 +2,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
- // TODO take fuck out of the class name
-public class HashMapFuckAround {
+ 
+public class ChocolateBarsProgram {
 
 	/**
 	 * @param args
