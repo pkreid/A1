@@ -2,12 +2,12 @@ import javax.swing.JOptionPane;
 import java.lang.Double; 
 import java.lang.Object; 
 public class BallPackerProgram{
-
+	// Test: this comment is to test whether egit is working
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
+	
 		int height = (int) GetDim("Box Height");
 		int width = (int) GetDim("Box Width");
 		int length = (int) GetDim("Box length");
