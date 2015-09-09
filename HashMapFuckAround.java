@@ -18,14 +18,17 @@ public class HashMapFuckAround {
 			put("Crunchie      ", "0.75");
 	
 		}};
+	// Make the hash to store the amounts
 		Map<String, String> barNum = new HashMap<String, String>();
 	// Loop over the entries 
 		for (Map.Entry<String, String>entry : barPrice.entrySet()) {
 			// Take the names from barPrice, get amount from Console
+			System.out.println("How many boxes of " + entry.getKey());
 			barNum.put(entry.getKey(), new Scanner(System.in).nextLine());
+			System.out.println(barNum.get(entry.getKey()));
 			
-			System.out.println(barNum.keySet());
-		//	System.out.println(entry.getKey() +" " + entry.getValue());
+		
+		
 		}
 		
 		//loop again
