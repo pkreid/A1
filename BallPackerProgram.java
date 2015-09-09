@@ -19,10 +19,8 @@ public class BallPackerProgram{
 		
 		
 		int BoxVol = (height * width * length); 
-	// JOptionPane.showMessageDialog(null, "The Volume of the box is: " + BoxVol );
-						
+	
 		double BallVol = Math.pow((BallRad * 2), 3.0);
-	//	JOptionPane.showMessageDialog(null, "The ball's volume is: " + BallVol);
 		int BallNum;
 		BallNum = (int) Math.floor(BoxVol/BallVol);
 		JOptionPane.showMessageDialog(null, "The Box can hold " + BallNum + " Balls");
